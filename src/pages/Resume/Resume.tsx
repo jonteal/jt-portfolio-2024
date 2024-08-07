@@ -7,11 +7,11 @@ import { ResumeComponent } from "../../components/ResumeComponent";
 
 import "./resume.css";
 
-const Resume = () => {
+export const Resume = () => {
   const [active, setActive] = useState(true);
 
   return (
-    <div className="resume-container">
+    <div className="flex flex-col items-center justify-center w-full mt-0">
       <h1 className="text-gray-800 font-light text-6xl mb-2">Resume</h1>
       <div className="resume-btns-container w-screen justify-center mt-5">
         <a
@@ -53,5 +53,3 @@ const Resume = () => {
     </div>
   );
 };
-
-export default Resume;

@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 
 import "./contact.css";
 
-const Contact = () => {
+export const Contact = () => {
   const [done, setDone] = useState(false);
 
   const formRef = useRef();
@@ -55,7 +55,7 @@ const Contact = () => {
                 <span className="font-bold text-2xl">Jon</span>{" "}
                 <span className="italic text-2xl">Jackson</span>
               </p>
-              <p>2023</p>
+              <p>2024</p>
             </div>
             <form
               // @ts-ignore
@@ -104,5 +104,3 @@ const Contact = () => {
     </div>
   );
 };
-
-export default Contact;

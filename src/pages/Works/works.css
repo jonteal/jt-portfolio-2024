@@ -1,8 +1,0 @@
-
-
-@media only screen and (max-width: 600px) {
-  .works-container {
-    display: flex;
-    flex-direction: column;
-  }
-}

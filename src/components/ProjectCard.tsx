@@ -22,7 +22,7 @@ export type ProjectCardProps = {
 };
 
 export const ProjectCard = ({ project }: ProjectCardProps) => (
-  <Card className="w-1/3 mx-5">
+  <Card className="sm:w-1/3 w-full mx-5 rounded">
     <CardHeader className="my-0 font-semibold italic font-serif text-2xl bg-gray-200">
       {project.name}
     </CardHeader>
@@ -38,7 +38,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => (
       <hr className="w-48 h-1 mx-auto my-1 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
       <p>{project.technologies}</p>
     </CardDescription>
-    <CardFooter>
+    <CardFooter className="mt-5">
       <a
         className="mx-12 transform transition duration-500 hover:text-gray-100 hover:scale-110 hover:bg-cyan-700 flex justify-center items-center mt-0 text-gray-800 bg-gray-100 p-2 border rounded-xl w-60"
         rel="noreferrer noopener"

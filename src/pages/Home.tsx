@@ -1,6 +1,4 @@
-import PlantsImg from "../../assets/images/plants.jpeg";
-
-import "./home.css";
+import PlantsImg from "../assets/images/plants.jpeg";
 
 export const Home = () => (
   <div className="h-64 bg-white p-2">
