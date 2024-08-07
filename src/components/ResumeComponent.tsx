@@ -1,5 +1,5 @@
-import { FaExternalLinkAlt } from "react-icons/fa";
 import { ResumeProject } from "./ResumeProject";
+import { ResumeSkill } from "./ResumeSkill";
 
 const resumeProjects = [
   {
@@ -33,6 +33,71 @@ const resumeProjects = [
     technologies:
       "React, Redux, Redux-Saga, Firebase, SASS, Typescript, Styled Components, Stripe",
     githubLink: "https://github.com/jonteal/FlowSwift",
+  },
+];
+
+const resumeSkills = [
+  {
+    id: 1,
+    skillName: "Languages",
+    skills: "Javascript, Typescript, HTML, CSS, SQL*, Python*",
+  },
+  {
+    id: 2,
+    skillName: "Frameworks",
+    skills:
+      "ReactJS, Wordpress, ExpressJS, NextJS, Shadcn, Bootstrap, Handlebars*",
+  },
+  {
+    id: 3,
+    skillName: "Javascript",
+    skills:
+      "NodeJS, Lodash, Webpack*, NPM, Axios, jQuery*, Sequelize, Prettier, ESLint, MomentJS",
+  },
+  {
+    id: 4,
+    skillName: "CSS",
+    skills: "SASS, TailwindCSS, Material UI, Styled Components",
+  },
+  {
+    id: 5,
+    skillName: "Request Formats",
+    skills: "AJAX, JSON, REST, GraphQL",
+  },
+  {
+    id: 6,
+    skillName: "Databases",
+    skills: "MySQL*, PostgreSQL*, MongoDB, Sqlite*",
+  },
+  {
+    id: 7,
+    skillName: "State Management",
+    skills: "Redux, ContextAPI",
+  },
+  {
+    id: 8,
+    skillName: "Cloud Services",
+    skills: "AWS*, Google Cloud - Firebase*",
+  },
+  {
+    id: 9,
+    skillName: "Platforms",
+    skills: "Web, Microsoft Office",
+  },
+  {
+    id: 10,
+    skillName: "DevOps",
+    skills: "Github, CircleCI, Docker* , BitBucket*",
+  },
+  {
+    id: 11,
+    skillName: "Third Party Services",
+    skills: "Stripe*",
+  },
+  {
+    id: 12,
+    skillName: "Other",
+    skills: "Figma*, Miro, Contentful (CMS), Micro-frontends*",
   },
 ];
 
@@ -102,76 +167,13 @@ export const ResumeComponent = () => (
         </h2>
         <p className="text-gray-100">* limited experience</p>
       </div>
-
-      <div className="flex flex-col items-center">
-        <h3 className="text-gray-100 mt-3 font-bold text-xl">Languages</h3>
-        <p className="text-gray-100">
-          Javascript, Typescript, HTML, CSS, SQL*, Python*
-        </p>
-      </div>
-
-      <div className="flex flex-col items-center">
-        <h3 className="text-gray-100 mt-3 font-bold text-xl">Frameworks</h3>
-        <p className="text-gray-100">
-          ReactJS, Wordpress, ExpressJS, NextJS, Bootstrap, Handlebars*
-        </p>
-      </div>
-
-      <div className="flex flex-col items-center">
-        <h3 className="text-gray-100 mt-3 font-bold text-xl">Javascript</h3>
-        <p className="text-gray-100">
-          Lodash, Webpack*, NPM, Axios, jQuery*, Sequelize, Prettier, ESLint,
-          MomentJS
-        </p>
-      </div>
-
-      <div className="flex flex-col items-center">
-        <h3 className="text-gray-100 mt-3 font-bold text-xl">CSS</h3>
-        <p className="text-gray-100">
-          SASS, TailwindCSS, Material UI, Styled Components
-        </p>
-      </div>
-
-      <div className="flex flex-col items-center">
-        <h3 className="text-gray-100 mt-3 font-bold text-xl">
-          Request/Formats
-        </h3>
-        <p className="text-gray-100">AJAX, JSON, REST, GraphQL</p>
-      </div>
-
-      <div className="flex flex-col items-center">
-        <h3 className="text-gray-100 mt-3 font-bold text-xl">Databases</h3>
-        <p className="text-gray-100">MySQL*, PostgreSQL*, MongoDB, Sqlite*</p>
-      </div>
-
-      <div className="flex flex-col items-center">
-        <h3 className="text-gray-100 mt-3 font-bold text-xl">Cloud Services</h3>
-        <p className="text-gray-100">AWS*, Google Cloud - Firebase*</p>
-      </div>
-
-      <div className="flex flex-col items-center">
-        <h3 className="text-gray-100 mt-3 font-bold text-xl">Platforms</h3>
-        <p className="text-gray-100">Web, Microsoft Office</p>
-      </div>
-
-      <div className="flex flex-col items-center">
-        <h3 className="text-gray-100 mt-3 font-bold text-xl">Dev Ops</h3>
-        <p className="text-gray-100">Docker* , BitBucket*, Github, CircleCI*</p>
-      </div>
-
-      <div className="flex flex-col items-center">
-        <h3 className="text-gray-100 mt-3 font-bold text-xl">
-          Third Party Services
-        </h3>
-        <p className="text-gray-100">Stripe*</p>
-      </div>
-
-      <div className="flex flex-col items-center">
-        <h3 className="text-gray-100 mt-3 font-bold text-xl">Other</h3>
-        <p className="text-gray-100">
-          Figma*, Miro, NodeJS, Redux, Contentful (CMS), Micro-frontends*
-        </p>
-      </div>
+      {resumeSkills.map((skill) => (
+        <ResumeSkill
+          key={skill.id}
+          skillName={skill.skillName}
+          skills={skill.skills}
+        />
+      ))}
     </div>
 
     {/* EXPERIENCE SECTION */}
@@ -179,9 +181,11 @@ export const ResumeComponent = () => (
       <h2 className="text-gray-100 text-2xl font-bold my-5">Experience</h2>
       <div className="flex flex-row justify-between">
         <div className="flex flex-row">
-          <p className="text-gray-100 font-serif">Software Engineer II</p>
+          <p className="text-gray-100 font-serif text-lg">
+            Software Engineer II
+          </p>
           <span className="mx-2 text-gray-100">|</span>
-          <h3 className="text-gray-100 font-bold">CVS Health</h3>
+          <h3 className="text-gray-100 font-bold text-lg">CVS Health</h3>
         </div>
         <p className="text-gray-100">June 2022 - Present</p>
       </div>
@@ -191,34 +195,40 @@ export const ResumeComponent = () => (
       </p>
       <ul className="list-disc list-outside text-left">
         <li className="text-gray-100">
-          Develop features used by millions of healthcare members every day
+          Develop and maintain features used by millions of healthcare members
+          every day
         </li>
         <li className="text-gray-100">
-          Maintain and increase code unit testing coverage, regression and
-          end-to-end UI testing via Playwright
+          Consistently contributes average of 35% of the total work delivered by
+          team of 6 members
         </li>
         <li className="text-gray-100">
-          Integrate features with CMS-driven content with GraphQL for full
-          multi-language translatability
+          Unit tests with RTL and UI tests with Playwright to keep code coverage
+          over 90% across all features
         </li>
         <li className="text-gray-100">
-          Demonstrate sprint progress and new feature development to team
-          leadership and stakeholders
+          Regularly presents sprint progress and new feature development to
+          large groups of product stakeholders
         </li>
         <li className="text-gray-100">
-          Implement tooling and programmatic prevention of accessibility (a11y)
-          defects
+          Reviews and tests pull requests as well as provide DevOps support for
+          CICD release maintenance
         </li>
         <li className="text-gray-100">
-          Review and quality test all pull requests on my team prior to code
-          merge
+          Mentors newer additions to the team and handles knowledge transfers
+          when needed
         </li>
+        <li className="text-gray-100">
+          Provides pull request reviews to all team members as well as across
+          teams
+        </li>
+        <li className="text-gray-100">Follows scrum and agile practices</li>
       </ul>
       <div className="flex flex-row justify-between mt-8">
         <div className="flex flex-row">
-          <p className="text-gray-100 font-serif">Tutor & Grader</p>
+          <p className="text-gray-100 font-serif text-lg">Tutor & Grader</p>
           <span className="mx-2 text-gray-100 ">|</span>
-          <h3 className="text-gray-100 font-bold">2U / edX</h3>
+          <h3 className="text-gray-100 font-bold text-lg">2U / edX</h3>
         </div>
         <p className="text-gray-100">Mar 2022 - May 2022</p>
       </div>

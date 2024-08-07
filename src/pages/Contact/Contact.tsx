@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 import "./contact.css";
 
 export const Contact = () => {
-  const [done, setDone] = useState(false);
+  const [done] = useState(false);
 
   const formRef = useRef();
 
