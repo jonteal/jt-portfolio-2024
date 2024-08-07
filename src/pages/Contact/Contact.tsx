@@ -8,13 +8,14 @@ const Contact = () => {
 
   const formRef = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: any) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
         "service_1h7upjw",
         "template_ggj73bi",
+        // @ts-ignore
         formRef.current,
         "GUHQzXgo8msLgXKuk"
       )
@@ -56,7 +57,12 @@ const Contact = () => {
               </p>
               <p>2023</p>
             </div>
-            <form ref={formRef} onSubmit={sendEmail} className="flex flex-col">
+            <form
+              // @ts-ignore
+              ref={formRef}
+              onSubmit={sendEmail}
+              className="flex flex-col"
+            >
               <label className="text-2xl font-light" htmlFor="from_name">
                 Name
               </label>

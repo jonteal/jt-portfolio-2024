@@ -1,4 +1,4 @@
-import { ProjectCard } from "../../components/ProjectCard/ProjectCard";
+import { ProjectCard } from "../../components/ProjectCard";
 import crownClothingImage from "../../assets/images/crown-clothing.png";
 import ozarkAirbnbImage from "../../assets/images/ozark-airbnb.png";
 import studyBuddyImage from "../../assets/images/study-buddy.png";
@@ -6,6 +6,13 @@ import greenThumbGif from "../../assets/images/add-crop.gif";
 import flowSwiftGif from "../../assets/images/add-kanban.gif";
 
 import "./works.css";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const projects = [
   {
@@ -54,30 +61,42 @@ const projects = [
   //   imageDesc: "Front end website for an Airbnb business called Ozark Airbnb",
   //   technologies: "React | Bootstrap",
   // },
-  {
-    id: 3,
-    name: "Study Buddy",
-    description:
-      "A full stack MERN tool to help students study and prepare for tests as well as enhance memorization skills.",
-    github: "https://github.com/jonteal/studybuddy",
-    // liveLink: "https://studybuddy-frontend.vercel.app/",
-    image: studyBuddyImage,
-    imageDesc: "A tool for students to use in order to prepare for tests",
-    technologies: "React | Express | MongoDB | Node | GraphQL",
-  },
+  // {
+  //   id: 4,
+  //   name: "Study Buddy",
+  //   description:
+  //     "A full stack MERN tool to help students study and prepare for tests as well as enhance memorization skills.",
+  //   github: "https://github.com/jonteal/studybuddy",
+  //   // liveLink: "https://studybuddy-frontend.vercel.app/",
+  //   image: studyBuddyImage,
+  //   imageDesc: "A tool for students to use in order to prepare for tests",
+  //   technologies: "React | Express | MongoDB | Node | GraphQL",
+  // },
 ];
 
-const Works = () => {
-  return (
-    <div className="border m-0 flex flex-col items-center bg-gray-800 p-14">
-      <h1 className="text-gray-100 font-light text-6xl mb-2">Works</h1>
-      <ul className="works-container">
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-export default Works;
+export const Works = () => (
+  <div className="border m-0 flex flex-col items-center bg-gray-800 p-14">
+    <h1 className="text-gray-100 font-light text-6xl mb-2">Works</h1>
+    <ul className="works-container flex flex-row w-full justify-center">
+      {/* <Carousel
+          opts={{
+            align: "start",
+          }}
+          className="w-full max-w-sm"
+        > */}
+      {/* <CarouselContent> */}
+      {projects.map((project) => (
+        // <CarouselItem
+        //   key={project.id}
+        //   className="md:basis-1/2 lg:basis-1/3"
+        // >
+        <ProjectCard project={project} />
+        // </CarouselItem>
+      ))}
+      {/* </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel> */}
+    </ul>
+  </div>
+);
