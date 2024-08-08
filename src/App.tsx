@@ -5,7 +5,7 @@ import { About } from "./pages/About";
 import { Works } from "./pages/Works";
 import { Resume } from "./pages/Resume/Resume";
 import { NotFound } from "./pages/NotFound";
-import { Navigation } from "./components/Navigation/Navigation";
+import { Navigation } from "./components/Navigation";
 
 import "./App.css";
 

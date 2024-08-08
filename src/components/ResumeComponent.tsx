@@ -102,15 +102,15 @@ const resumeSkills = [
 ];
 
 export const ResumeComponent = () => (
-  <div className="m-3 border w-screen rounded-xl flex flex-col items-center bg-gray-800 pt-7 px-72">
+  <div className="m-3 border w-screen rounded-xl flex flex-col items-center bg-gray-800 pt-7 sm:px-72 px-3">
     <h1 className="text-gray-100 text-4xl font-bold mb-3">Jon Jackson</h1>
 
-    <div className="flex flex-row mb-3">
+    <div className="flex sm:flex-row flex-col mb-3">
       <p className="text-gray-100">Lowell, AR 72745</p>
-      <span className="text-gray-100 ml-4 mr-4 vertical-bar">|</span>
+      <span className="text-gray-100 ml-4 mr-4">|</span>
 
       <p className="text-gray-100">479-601-3157</p>
-      <span className="text-gray-100 ml-4 mr-4 vertical-bar">|</span>
+      <span className="text-gray-100 ml-4 mr-4">|</span>
 
       <p className="text-gray-100">jonjackson.webdesign@gmail.com</p>
     </div>
@@ -125,7 +125,7 @@ export const ResumeComponent = () => (
       </a>
       <span className="text-gray-100 ml-4 mr-4">|</span>
 
-      <a className="text-gray-100" href="https://jonjacksondev.netlify.app/">
+      <a className="text-gray-100" href="https://jonjackson.netlify.app/">
         Portfolio
       </a>
     </div>
@@ -136,24 +136,24 @@ export const ResumeComponent = () => (
 
       <div className="mb-5 w-full">
         <div className="flex flex-row justify-between">
-          <p className="text-gray-100">
+          <p className="text-gray-100 sm:text-md text-sm">
             Full Stack Web Development Certification
           </p>
-          <p className="text-gray-100">2021 - 2022</p>
+          <p className="text-gray-100 sm:text-md text-sm">2021 - 2022</p>
         </div>
-        <p className="text-gray-100 font-bold text-left">
+        <p className="text-gray-100 font-bold text-left sm:text-md text-sm">
           University of Denver, Denver, CO
         </p>
       </div>
 
       <div className="mb-5 w-full">
         <div className="flex flex-row justify-between">
-          <p className="text-gray-100 font-bold mr-3">
+          <p className="text-gray-100 font-bold sm:text-md text-sm">
             University of Arkansas, Fayetteville, AR
           </p>
-          <p className="text-gray-100">2015 - 2019</p>
+          <p className="text-gray-100 sm:text-md text-sm">2015 - 2019</p>
         </div>
-        <p className="text-gray-100 font-bold text-left">
+        <p className="text-gray-100 font-bold text-left sm:text-md text-sm">
           Bachelor of Science, Marketing
         </p>
       </div>
@@ -179,8 +179,8 @@ export const ResumeComponent = () => (
     {/* EXPERIENCE SECTION */}
     <div className="mb-3">
       <h2 className="text-gray-100 text-2xl font-bold my-5">Experience</h2>
-      <div className="flex flex-row justify-between">
-        <div className="flex flex-row">
+      <div className="flex sm:flex-row flex-col mb-3 sm:mb-0 justify-between">
+        <div className="flex flex-row justify-center">
           <p className="text-gray-100 font-serif text-lg">
             Software Engineer II
           </p>
@@ -193,7 +193,7 @@ export const ResumeComponent = () => (
         Frontend web developer for Aetna Health using React, Typescript,
         Contentful, Redux, Sagas, GraphQL, and AWS.
       </p>
-      <ul className="list-disc list-outside text-left">
+      <ul className="list-disc list-outside text-left mx-2">
         <li className="text-gray-100">
           Develop and maintain features used by millions of healthcare members
           every day
@@ -224,8 +224,8 @@ export const ResumeComponent = () => (
         </li>
         <li className="text-gray-100">Follows scrum and agile practices</li>
       </ul>
-      <div className="flex flex-row justify-between mt-8">
-        <div className="flex flex-row">
+      <div className="flex sm:flex-row flex-col justify-between mt-8 mb-3 sm:mb-0">
+        <div className="flex flex-row justify-center">
           <p className="text-gray-100 font-serif text-lg">Tutor & Grader</p>
           <span className="mx-2 text-gray-100 ">|</span>
           <h3 className="text-gray-100 font-bold text-lg">2U / edX</h3>
@@ -236,7 +236,7 @@ export const ResumeComponent = () => (
         Tutor and grader supporting students going through a 6-month full stack
         engineering program.
       </p>
-      <ul className="list-disc list-outside text-left">
+      <ul className="list-disc list-outside text-left mx-2">
         <li className="text-gray-100">
           Tutoring 8 students for 1 hour per week each to support their learning
           and comprehension of concepts ranging from basic HTML, CSS,

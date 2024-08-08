@@ -22,7 +22,7 @@ export type ProjectCardProps = {
 };
 
 export const ProjectCard = ({ project }: ProjectCardProps) => (
-  <Card className="sm:w-1/3 w-full mx-5 rounded">
+  <Card className="sm:w-1/4 w-10/12 mx-3 mb-5 rounded">
     <CardHeader className="my-0 font-semibold italic font-serif text-2xl bg-gray-200">
       {project.name}
     </CardHeader>
@@ -33,14 +33,14 @@ export const ProjectCard = ({ project }: ProjectCardProps) => (
         src={project.image}
       />
     </CardContent>
-    <CardDescription className="flex flex-wrap">
+    <CardDescription className="flex flex-wrap px-2">
       <p>{project.description}</p>
       <hr className="w-48 h-1 mx-auto my-1 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-700" />
       <p>{project.technologies}</p>
     </CardDescription>
-    <CardFooter className="mt-5">
+    <CardFooter className="mt-5 w-full flex flex-row justify-around">
       <a
-        className="mx-12 transform transition duration-500 hover:text-gray-100 hover:scale-110 hover:bg-cyan-700 flex justify-center items-center mt-0 text-gray-800 bg-gray-100 p-2 border rounded-xl w-60"
+        className="mx-5 transform transition duration-500 hover:text-gray-100 hover:scale-110 hover:bg-cyan-700 flex justify-center items-center mt-0 text-gray-800 bg-gray-100 p-2 border rounded-xl w-60 h-10"
         rel="noreferrer noopener"
         target="_blank"
         href={project.github}
@@ -51,13 +51,13 @@ export const ProjectCard = ({ project }: ProjectCardProps) => (
         <a
           rel="noreferrer noopener"
           target="_blank"
-          className="mx-12 transform transition duration-500 hover:text-gray-100 hover:scale-110 hover:bg-cyan-700 flex justify-center items-center mt-0 text-gray-800 bg-gray-100 p-2 border rounded-xl w-60"
+          className="mx-5 transform transition duration-500 hover:text-gray-100 hover:scale-110 hover:bg-cyan-700 flex justify-center items-center mt-0 text-gray-800 bg-gray-100 p-2 border rounded-xl w-60 h-10"
           href={project.liveLink}
         >
           <FaRegEye />
         </a>
       ) : (
-        <p className="mx-12 flex justify-center items-center mt-0 bg-gray-100 p-2 border rounded-xl w-96">
+        <p className="flex justify-center items-center mt-0 bg-gray-100 p-2 border rounded-xl w-96">
           No live link
         </p>
       )}
