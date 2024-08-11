@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ResumePdf from "../../assets/images/resume.pdf";
-import ReferencesPdf from "../../assets/images/references-no-heather.pdf";
+import ReferencesPdf from "../../assets/images/references_2024.pdf";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { ReferencesComponent } from "../../components/ReferencesComponent";
 import { ResumeComponent } from "../../components/ResumeComponent";

@@ -3,6 +3,15 @@ import { Reference } from "./Reference";
 const references = [
   {
     id: 1,
+    name: "Pete Nelson",
+    position: "Principal Engineer",
+    company: "CVS Health / Aetna",
+    email: "nelsonpf@aetna.com",
+    number: "479-595-1218",
+    relationship: "Colleague",
+  },
+  {
+    id: 2,
     name: "Francis Vithayathil",
     position: "Digital Senior Development Engineer I",
     company: "CVS Health / Aetna",
@@ -11,7 +20,7 @@ const references = [
     relationship: "Team Member",
   },
   {
-    id: 2,
+    id: 3,
     name: "Mason Holland",
     position: "Digital Development Engineer III",
     company: "CVS Health / Aetna",
@@ -20,7 +29,7 @@ const references = [
     relationship: "Team Member",
   },
   {
-    id: 3,
+    id: 4,
     name: "Ivan Ontiveros",
     position: "Digital Development Engineer I",
     company: "CVS Health / Aetna",
@@ -29,22 +38,13 @@ const references = [
     relationship: "Team Member",
   },
   {
-    id: 4,
+    id: 5,
     name: "Laurel Thorburn",
     position: "Software Developer",
     company: "Shopify",
     email: "laurelthorburn@gmail.com",
     number: "408-250-5504",
     relationship: "Shared project contributor",
-  },
-  {
-    id: 5,
-    name: "Robert Parsons",
-    position: "Software Developer",
-    company: "2U / formerly Trilogy",
-    email: "rmpcoding@gmail.com",
-    number: "626-703-1909",
-    relationship: "Fellow tutor",
   },
 ];
 
