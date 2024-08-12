@@ -82,7 +82,8 @@ const resumeSkills = [
   {
     id: 9,
     skillName: "Platforms",
-    skills: "Web, Microsoft Office",
+    skills:
+      "Web, Microsoft Office, Adobe Journey Optimizer, Adobe Experience Platform",
   },
   {
     id: 10,
